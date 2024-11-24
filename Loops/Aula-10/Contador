@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Contador {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite um número para contar até: ");
+        int limite = scanner.nextInt();
+
+        // Usando loop for
+        System.out.println("\nContagem usando loop for:");
+        for (int i = 1; i <= limite; i++) {
+            System.out.println(i);
+        }
+
+        // Usando loop while
+        System.out.println("\nContagem usando loop while:");
+        int j = 1;
+        while (j <= limite) {
+            System.out.println(j);
+            j++;
+        }
+
+        scanner.close();
+    }
+}
