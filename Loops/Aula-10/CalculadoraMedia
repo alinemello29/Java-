@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class CalculadoraMedia {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int soma = 0;
+        int contador = 0;
+        String continuar = "s";
+
+        System.out.println("Calculadora de Média");
+
+        while (continuar.equalsIgnoreCase("s")) {
+            System.out.print("Digite um número: ");
+            int numero = scanner.nextInt();
+            soma += numero; // Adiciona o número à soma
+            contador++; // Incrementa o contador
+
+            System.out.print("Deseja continuar? (s/n): ");
+            continuar = scanner.next();
+        }
+
+        // Verifica se o contador é diferente de zero para evitar divisão por zero
+        if (contador > 0) {
+            double media = (double) soma / contador; // Calcula a média
+            System.out.println("A soma dos números é: " + soma);
+            System.out.println("A média dos números é: " + media);
+        } else {
+            System.out.println("Nenhum número foi inserido.");
+        }
+
+        scanner.close();
+    }
+}
